@@ -76,10 +76,10 @@ class distance_main{
 
 		//creating another object and assigning second object (obj2) as reference variable.
 		distance another_obj = obj2;
+		//printing reference variable
 		another_obj.print();
 
 		System.out.println("Enter modified values of second distance......");
-
 		System.out.print("Enter feets:  ");
 		f = scan.nextInt();
 		System.out.print("Enter inches:  ");
@@ -87,9 +87,12 @@ class distance_main{
 
 		//These lines are showing that if you modify original copy, reference variable also get modified. This means assigning reference will not copy whole object but only reference will be created.
 		System.out.println("Modifying second object");
+		//modifying second object
 		obj2.modify(f,i);
-		System.out.println("Printing second object to see if change happens with reference variable as well.");      
+		System.out.println("Printing second object to see if change happens with reference variable as well.");  
+		//printing second object
 		obj2.print();
+		//printing reference of second object
 		another_obj.print();
 
 		System.out.println("Creating clone of first object");
@@ -101,50 +104,20 @@ class distance_main{
 
 
 		System.out.println("Enter modified values of first distance......");
-
 		System.out.print("Enter feets:  ");
 		f = scan.nextInt();
 		System.out.print("Enter inches:  ");
 		i = scan.nextInt();
 
+		//modifying first object
 		System.out.println("Modifying object 1");
 		obj1.modify(f,i);
 		System.out.println("Printing object 1");
+		//printing first object after modification
 		obj1.print();
 		System.out.println("Printing clone of object 1");
+		//printing clone of first object after modifying original object
 		clone.print();
 
 	}
 }
-
-/* Output
-C:\Users\Amit Pal\Desktop\classwork sem-2\JAVA>java distance_main
-Enter the distance:
-Enter feets:  10
-Enter inches:  11
-Distance is :  10' 11"
-New object is creating.........
-Enter feets:  14
-Enter inches:  23
-Distance is :  15' 11"
-Distance is :  15' 11"
-Enter modified values of second distance......
-Enter feets:  10
-Enter inches:  14
-Modifying second object
-Printing second object to see if change happens with reference variable as well.
-Distance is :  11' 2"
-Distance is :  11' 2"
-Creating clone of first object
-Printing object 1
-Distance is :  10' 11"
-Printing clone of object 1
-Distance is :  10' 11"
-Enter modified values of first distance......
-Enter feets:  12
-Enter inches:  11
-Modifying object 1
-Printing object 1
-Distance is :  12' 11"
-Printing clone of object 1
-Distance is :  10' 11"    */
